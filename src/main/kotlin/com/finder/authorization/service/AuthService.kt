@@ -5,7 +5,8 @@ import org.springframework.stereotype.Service
 @Service
 class AuthService {
 
-    fun register(userInfo: UserInfo) {
+    fun registerUser(userInfo: UserInfo) {
+//        return ""
     }
 
     fun getToken(){
