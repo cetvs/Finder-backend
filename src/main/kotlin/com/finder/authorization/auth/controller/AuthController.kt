@@ -1,6 +1,6 @@
-package com.finder.authorization.controller
+package com.finder.authorization.auth.controller
 
-import com.finder.authorization.controller.AuthController.Companion.FINDER
+import com.finder.authorization.auth.controller.AuthController.Companion.FINDER
 import org.slf4j.LoggerFactory
 import org.springframework.web.bind.annotation.*
 

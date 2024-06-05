@@ -1,4 +1,4 @@
-package com.finder.authorization.service
+package com.finder.authorization.auth.entity
 
 data class UserInfo(
     val phoneNumber: String,
