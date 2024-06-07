@@ -1,14 +1,17 @@
 package com.finder.authorization.clean_websocket
 
+import com.finder.authorization.clean_websocket.websocket_proxy.ChatProxyWebsocket
 import org.springframework.web.socket.*
 import java.io.IOException
 
-class CustomWebSocketHandler: WebSocketHandler {
+class ChatSocketHandler: WebSocketHandler {
     private val sessions = mutableSetOf<WebSocketSession>()
+    private val chatProxyWebsocket = ChatProxyWebsocket()
 
     override fun afterConnectionEstablished(session: WebSocketSession) {
         println("afterConnectionEstablished session = $session")
         sessions.add(session)
+//        session.sendMessage(TextMessage(proxyWebsocket.formGetUserId()))
     }
 
     override fun handleMessage(session: WebSocketSession, message: WebSocketMessage<*>) {

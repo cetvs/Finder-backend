@@ -10,10 +10,10 @@ import org.springframework.web.socket.config.annotation.WebSocketHandlerRegistry
 
 @Configuration
 @EnableWebSocket
-class WebSocketConfig : WebSocketConfigurer {
+class ChatSocketConfig : WebSocketConfigurer {
     @Bean
     fun webSocketHandler(): WebSocketHandler {
-        return CustomWebSocketHandler()
+        return ChatSocketHandler()
     }
 
     override fun registerWebSocketHandlers(registry: WebSocketHandlerRegistry) {
